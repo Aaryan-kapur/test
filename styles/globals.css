@@ -1,0 +1,133 @@
+/** MAIN *** Keep Utilities used site-wide
+ *
+ * USE CSS MODULES FOR PAGE SPECIFIC CSS
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+
+:root {
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-rendering: geometricPrecision;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+html {
+	@apply w-screen;
+	overflow-x: hidden;
+}
+
+body {
+	@apply bg-white;
+	overflow-x: hidden;
+}
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* BIG HEADER */
+.h1 {
+	font-size: 48px;
+	font-weight: 500;
+}
+
+/* SUB HEADER */
+.h2 {
+	font-size: 36px;
+	font-weight: 500;
+}
+
+/* HEADER */
+.h3 {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+/* Paragraph */
+p {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+/* Sub Text */
+.stext {
+	font-size: 14px;
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* Quote Text */
+.qtext {
+	font-size: 18px;
+	font-weight: 500;
+	font-style: italic;
+}
+
+/* Link */
+a {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+/* CUSTOMS */
+
+#nav {
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#blog-bg {
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.red-button:hover {
+	box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.25) inset;
+	cursor: pointer;
+	user-select: none;
+}
+
+#blog-card:hover {
+	transform: scale(1.25);
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb:active {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+@layer utilities {
+	.w-400px {
+		width: 400px;
+	}
+}
